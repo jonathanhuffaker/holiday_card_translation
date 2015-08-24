@@ -3,38 +3,47 @@
 //above is just a test to make sure we had linked our file correctly
 
 $(document).ready(function(){
-
-//on click alert example below was a test and works - commenting out
+//on click  example below was a test and works 
 $("#submit").click(function(){
 	console.log("your jquery button click worked");
 	
 	//i think we can use a jquery to array function as opposed to split
 	//, but used the below so that it doesnt matter the case
-	
 	var $usersInput = $("#input").val().toLowerCase().split(" ");
 	console.log($usersInput);
-	
+
 //-------Everything above works -------------------------
-
-
-	var $spanishChecked = $("#spanishButton :checked").text();
-	var $germanChecked = $("germanButton :checked").text();
 	
-// console.log("success, button was checked");
+	//trying to get it to convert - no errors in console but not working
+	var $BlankforOutput = function() {
+	("#output").html(translate($usersInput));
+	return $BlankforOutput;
+	console.log($BlankforOutput); 
+	};
+	
 
 //if button is selected we will translate to spanish or german
-if ($spanishChecked === ":checked") {
-	var $spanishOutput = ($usersInput).prependTo("#output");
-	// console.log(translate(getTransToSpanish)).prependTo();
+//The below works but when german is slected "one small spanish victory" appears in console
+console.log($("#langButton").val());
+if ($("#langButton").val() === "Spanish") {
+	//translate('getTransToSpanish');
 
-	$("#output").html($usersInput);
-}else {
-	alert("If your seeing this alert then no text was added to the page. At lest this alert is not a syntax error");
+	console.log("One small spanish victory");
+	}  else if ($("#langButton").val() === "German") {
+		console.log ("One small German Victory");
+	} else 
+		alert("Keep trying");
+
+	$("#output").html();	
+
+
+//now we will need a forEach loop/ for loop to cycle through the words
+
+function outputLang (array) {
+	//document.write(translate);
+	console.log(translate);
 }
-
-// 	alert("Success, your test worked. You selected translate to spanish");
-// }
-
+$usersInput.forEach(outputLang);
 
 	});
 });
@@ -43,7 +52,15 @@ if ($spanishChecked === ":checked") {
 
 
 
-//not sure where i was going with the below so commenting out for time being
+
+
+// var $spanishChecked = $("input:checked").text(true);
+	// var $spanishChecked = $("germanButton :checked").text();
+	// var $germanChecked = $("germanButton :checked").text();
+	
+// console.log("success, button was checked");
+
+//not sure where i was going with the below on saturday so commenting out for time being
 
 // var holidayGreeting = {
 // 	langDefault = "english";
