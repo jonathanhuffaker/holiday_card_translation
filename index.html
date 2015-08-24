@@ -1,17 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<header></header>
 	<body>
 
 	<div>
-	<textarea></textarea><br>
-    <input type="radio" name="genre" value="Spanish"> Translate to Spanish
-    <input type="radio" name="genre" value="German"> Translate to German 
+	<textarea id="input"></textarea><br>
+    <input type="radio" name="genre" value="Spanish" id= "spanishButton"> Translate to Spanish
+    <input type="radio" name="genre" value="German" id= "germanButton"> Translate to German 
    
     <br>
-    <button type="submit">Translate</button>
+    <button type="submit" id="submit">Translate</button>
+		<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 		
+		<script  src ="spanish.js" type = "text/javascript" > </script>
+		<script  src ="german.js" type = "text/javascript" > </script>
 		<script  src ="main.js" type = "text/javascript" > </script>
+
+		<div id="output"></div>
 	</body>
 
 
