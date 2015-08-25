@@ -4,12 +4,12 @@ var Translate = (function(){
 
 
 	var transToSpanish = {
-		"merry":"alegre", 
-		"christmas":"Navidad", 
-		"and":"y", 
-		"happy":"feliz",
-		"new":"nuevo", 
-		"year":"ano"
+		"merry":"alegre ", 
+		"christmas":"Navidad ", 
+		"and":"y ", 
+		"happy":"feliz ",
+		"new":"nuevo ", 
+		"year":"ano "
 	}
 
 	return {
