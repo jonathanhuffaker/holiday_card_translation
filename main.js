@@ -3,49 +3,41 @@
 //above is just a test to make sure we had linked our file correctly
 
 $(document).ready(function(){
-//on click  example below was a test and works 
-$("#submit").click(function(){
-	console.log("your jquery button click worked");
-	
-	//i think we can use a jquery to array function as opposed to split
-	//, but used the below so that it doesnt matter the case
-	var $usersInput = $("#input").val().toLowerCase().split(" ");
-	console.log($usersInput);
+	//on click  example below was a test and works 
+	$("#submit").click(function(){
+		console.log("your jquery button click worked");
+		
+		//i think we can use a jquery to array function as opposed to split
+		//, but used the below so that it doesnt matter the case
+		var $usersInput = $("#input").val().toLowerCase().split(" ");
+		console.log($usersInput);
 
-//-------Everything above works -------------------------
-	
-	//trying to get it to convert - no errors in console but not working
-	var $BlankforOutput = function() {
-	("#output").html(translate($usersInput));
-	return $BlankforOutput;
-	console.log($BlankforOutput); 
-	};
-	
+	//-------Everything above works -------------------------
+		
+		//trying to get it to convert - no errors in console but not working
+		// var $BlankforOutput = function() {
+		// ("#output").html(translate($usersInput));
+		// return $BlankforOutput;
+		// console.log($BlankforOutput); 
+		// };
+		
 
-//if button is selected we will translate to spanish or german
-//The below works but when german is slected "one small spanish victory" appears in console
-console.log($("#langButton").val());
-if ($("#langButton").val() === "Spanish") {
-	//translate('getTransToSpanish');
+	//if button is selected we will translate to spanish or german
+	//The below works but when german is slected "one small spanish victory" appears in console
+		console.log($("#langButton").val());
+		if ($("#langButton").val() === "Spanish") {
 
-	console.log("One small spanish victory");
-	}  else if ($("#langButton").val() === "German") {
-		console.log ("One small German Victory");
-	} else 
-		alert("Keep trying");
+			console.log("One small spanish victory");
+			$("#output").html(translate.getTransToSpanish($usersInput));
+		}  else if ($("#langButton").val() === "German") {
+			console.log ("One small German Victory");
+		} else {
+			alert("Keep trying");
+		}
 
-	$("#output").html();	
-
-
-//now we will need a forEach loop/ for loop to cycle through the words
-
-function outputLang (array) {
-	//document.write(translate);
-	console.log(translate);
-}
-$usersInput.forEach(outputLang);
-
+		$("#output").html();	
 	});
+
 });
 
 
