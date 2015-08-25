@@ -1,6 +1,6 @@
 //second iife
 
-var translate = (function(old_translate){
+var Translate = (function(oldtranslate){
 
 	var transToGerman = {
 		"merry":"frohe", 
@@ -11,11 +11,11 @@ var translate = (function(old_translate){
 		"year":"jahr"
 	}
 
-	old_translate.getTransToGerman = function(input) {
-		return transToGerman[input]
+
+	oldtranslate.getTransToGerman = function(input) {
+		return transToGerman[input];
 	}
 
-	return old_translate
+	return oldtranslate;
 
-})(translate);
-
+})(Translate);

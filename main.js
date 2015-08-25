@@ -11,31 +11,27 @@ $(document).ready(function(){
 		//, but used the below so that it doesnt matter the case
 		var $usersInput = $("#input").val().toLowerCase().split(" ");
 		console.log($usersInput);
-
+		// var spanOutput;
 	//-------Everything above works -------------------------
 		
-		//trying to get it to convert - no errors in console but not working
-		// var $BlankforOutput = function() {
-		// ("#output").html(translate($usersInput));
-		// return $BlankforOutput;
-		// console.log($BlankforOutput); 
-		// };
+	
 		
-
 	//if button is selected we will translate to spanish or german
 	//The below works but when german is slected "one small spanish victory" appears in console
-		console.log($("#langButton").val());
-		if ($("#langButton").val() === "Spanish") {
-
+		
+		if ($("#langButton:checked").val() === "Spanish") {
 			console.log("One small spanish victory");
-			$("#output").html(translate.getTransToSpanish($usersInput));
-		}  else if ($("#langButton").val() === "German") {
+			// spanOutput = $("#output").html(translate.getTransToSpanish($usersInput));
+			$("#output").html(Translate.getTransToSpanish($usersInput));
+		
+		}  else if ($("#langButton:checked").val() === "German") {
 			console.log ("One small German Victory");
+			$("#output").html(Translate.getTransToGerman($usersInput));
 		} else {
 			alert("Keep trying");
 		}
 
-		$("#output").html();	
+		// $("#output").html();	
 	});
 
 });
@@ -46,16 +42,3 @@ $(document).ready(function(){
 
 
 
-// var $spanishChecked = $("input:checked").text(true);
-	// var $spanishChecked = $("germanButton :checked").text();
-	// var $germanChecked = $("germanButton :checked").text();
-	
-// console.log("success, button was checked");
-
-//not sure where i was going with the below on saturday so commenting out for time being
-
-// var holidayGreeting = {
-// 	langDefault = "english";
-// 	langSpan = "spanish";
-// 	langGerm = "german";
-// }

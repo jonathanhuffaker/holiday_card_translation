@@ -1,6 +1,6 @@
 //first iife
 
-var translate = (function(){
+var Translate = (function(){
 
 
 	var transToSpanish = {
