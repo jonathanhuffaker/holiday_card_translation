@@ -12,24 +12,16 @@ var Translate = (function(oldtranslate){
 	}
 
 
-// 	oldtranslate.getTransToGerman = function(input) {
-// 		return transToGerman[input];
-// 	}
 
-// 	return oldtranslate;
+	oldtranslate.getTransToGerman = function(input) {
+		var translation2=[];
+		input.forEach(function(word) {
+			translation2 += transToGerman[word];
+		});
 
-// })(Translate);
-
-
-	return {
-		getTransToGerman: function(arrayOfWords) {
-			var translation = "";
-
-			arrayOfWords.forEach(function(word) {
-				translation += transToGerman[word];
-			});
-		 return translation;
-		}
+		return translation2;
 	}
+	return Translate;
 
 })(Translate);
+
